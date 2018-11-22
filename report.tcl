@@ -17,6 +17,7 @@
  
 
 #############################################          DESIGN  ANALYSIS          #####################################################
+######################################################
  
 
 #NAME
@@ -162,7 +163,7 @@ report_clock_gating_check > ${DESIGN}_clock_gating_check.rpt; # report clock gat
 #This command generates a report of clock   timing   information   for   the current design.
 
 ####################################################
-report_clock_timing > ${DESIGN}_clock_timing.rpt;  # report clock timing
+report_clock_timing -type summary > ${DESIGN}_clock_timing.rpt;  # report clock timing, alternatively latency/skew/transition
 
 
 ###########################################################################################################
