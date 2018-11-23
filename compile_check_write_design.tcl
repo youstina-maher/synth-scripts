@@ -100,7 +100,6 @@ check_timing > ${DESIGN}_timing_check.out
 
 # The following section writes out the synthesized netlist in a .v file in the ./syn directory
 
-cd ./syn
 
 set filename [format "%s%s"  $DESIGN ".syn.v"]
 write -format verilog -hierarchy -output $filename
@@ -111,7 +110,7 @@ write_sdc $filename
 set filename [format "%s%s"  $DESIGN ".upf"]
 save_upf $filename
 
-cd ..
+
 # ScanDEF
 
 
