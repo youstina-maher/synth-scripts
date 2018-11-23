@@ -101,7 +101,7 @@ check_timing > ${DESIGN}_timing_check.out
 # The following section writes out the synthesized netlist in a .v file in the ./syn directory
 
 
-set filename [format "%s%s"  $DESIGN ".syn.v"]
+set filename [format "%s%s"  $DESIGN ".v"]
 write -format verilog -hierarchy -output $filename
 
 set filename [format "%s%s"  $DESIGN ".sdc"]
