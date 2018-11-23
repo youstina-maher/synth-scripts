@@ -10,9 +10,6 @@
 # #########################################################################################
 
 
-#-- Replace analyze and elaborate with the reading_files script
-analyze -f verilog $DESIGN.v
-elaborate $DESIGN
 current_design $DESIGN
 
 # default map effort is medium, change to high (or low, not recommended) if you desire dc to exert more effort to optimize the critical path
