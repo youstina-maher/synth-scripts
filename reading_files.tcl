@@ -6,7 +6,7 @@
 set rtl_directory './rtl'
 set syn_directory './syn'
 set fp [open "$rtl_directory/rtl_files.txt" r]
-set outfile [open "$syn_directory/reading_files.tcl" w]
+set outfile [open "$syn_directory/reading_verilog_files.tcl" w]
 set file_data [read $fp]
 close $fp
 set data [split $file_data "\n"]
@@ -15,3 +15,4 @@ foreach line $data {
      puts $outfile "read_verilog $line"
 }
 close $outfile
+source reading_verilog_files.tcl
