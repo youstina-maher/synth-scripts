@@ -3,7 +3,7 @@
 # #########################################################################################
 
 # #########################################################################################
-# -- This script genrerates reports for the design, area, timing and power 
+# -- This script writes the netlist output file, genrerates reports for the design, area, timing and power and writes out the parasitics in SPEF or SPBF formats
 # -- Note: this script assumes the toplevel design name was put into a variable 
 #    called my_toplevel prior to this script
 # #########################################################################################
@@ -12,6 +12,13 @@
 #[-nosplit] is an option used for not splitting lines when column fields overflow
 #(remove the # at the beginning of the line to activate the commands)
  
+# The following section writes out the synthesized netlist in a .v file
+
+set filename [format "%s%s"  $DESIGN ".v"]
+write -format verilog -hierarchy -output $filename
+
+set filename [format "%s%s"  $DESIGN ".ddc"]
+write -format ddc -hierarchy -output $filename
 
 
  
