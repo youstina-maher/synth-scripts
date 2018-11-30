@@ -101,13 +101,6 @@ compile -gate_clock
 check_design > ${DESIGN}_design_check.out
 check_timing > ${DESIGN}_timing_check.out
 
-# The following section writes out the synthesized netlist in a .v file
-
-set filename [format "%s%s"  $DESIGN ".v"]
-write -format verilog -hierarchy -output $filename
-
-set filename [format "%s%s"  $DESIGN ".ddc"]
-write -format ddc -hierarchy -output $filename
 
 
 # ScanDEF
