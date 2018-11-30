@@ -109,21 +109,6 @@ write -format verilog -hierarchy -output $filename
 set filename [format "%s%s"  $DESIGN ".ddc"]
 write -format ddc -hierarchy -output $filename
 
-# --The following writes out the parasitics in SPEF or SPBF format (only spef supported pre-route)
-# --You may edit the -format option to be reduced or distributed: For reduced format, there is one 
-# resistance and capacitance per net. In distributed  format, the entire RC tree is written out for each net.
-
-set filename [format "%s%s"  $DESIGN ".spef"]
-write_parasitics -format distributed -output $filename
-
-set filename [format "%s%s"  $DESIGN ".sdf"]
-write_sdf $filename
-
-set filename [format "%s%s"  $DESIGN ".sdc"]
-write_sdc $filename
-
-set filename [format "%s%s"  $DESIGN ".upf"]
-save_upf $filename
 
 # ScanDEF
 
